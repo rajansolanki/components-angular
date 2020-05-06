@@ -1,0 +1,40 @@
+constants:
+  - cache_key: &cache_key yarn-v1-{{ checksum "yarn.lock" }}
+
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:13.6.0
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - *cache_key
+            - yarn-v1-
+      - run:
+          name: yarn
+          command: yarn --frozen-lockfile
+      - run:
+          name: commitlint
+          command: yarn commitlint --from origin/master --to ${CIRCLE_SHA1} -V
+      - run:
+          name: prettier
+          command: yarn prettier -c "**/*.{ts,js,html,scss,md,yml,json}"
+      - run:
+          name: tsc
+          command: |
+            yarn tsc --noEmit -p tsconfig.app.json
+            yarn tsc --noEmit -p tsconfig.spec.json
+      - run:
+          name: lint
+          command: yarn lint
+      - save_cache:
+          key: *cache_key
+          paths:
+            - ~/.cache/yarn
+      - run:
+          name: test:spec
+          command: yarn test:spec --coverage --maxWorkers=2
+      - store_test_results:
+          path: reports
