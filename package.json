@@ -47,5 +47,18 @@
     "tslint": "~6.1.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "~3.8.3"
+  },
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/angular@9.0.14"
+    },
+    "componentsDefaultDirectory": "src/app/components/{name}",
+    "packageManager": "yarn",
+    "saveDependenciesAsComponents": true
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "index.ts"
+    }
   }
 }

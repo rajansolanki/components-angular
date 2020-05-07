@@ -1,6 +1,11 @@
 module.exports = {
   preset: 'jest-preset-angular',
   setupFilesAfterEnv: ['<rootDir>/src/setup-jest.ts'],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '<rootDir>/.git',
+    '<rootDir>/dist',
+  ],
   reporters: [
     'default',
     [
