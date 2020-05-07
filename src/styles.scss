@@ -1,0 +1,291 @@
+@import 'src/app/components/sass/reset', 'src/app/components/sass/grid',
+  'src/app/components/sass/mixins';
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
+    Arial, sans-serif;
+  @include font(body-1);
+}
+
+h1 {
+  @include font(headline);
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+h2 {
+  @include font(title);
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+h3 {
+  @include font(subheading-2);
+}
+
+app-root {
+  display: block;
+}
+
+button {
+  @extend %button;
+}
+
+a,
+button {
+  @include hoverScale(1.1, 0.9);
+}
+
+@keyframes rainbow {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100vw);
+  }
+  90% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes enterScale {
+  0% {
+    transform: scale(0.02);
+  }
+  1% {
+    transform: scale(0.06);
+  }
+  2% {
+    transform: scale(0.11);
+  }
+  3% {
+    transform: scale(0.17);
+  }
+  4% {
+    transform: scale(0.23);
+  }
+  5% {
+    transform: scale(0.3);
+  }
+  6% {
+    transform: scale(0.37);
+  }
+  7% {
+    transform: scale(0.44);
+  }
+  8% {
+    transform: scale(0.5);
+  }
+  9% {
+    transform: scale(0.57);
+  }
+  10% {
+    transform: scale(0.63);
+  }
+  11% {
+    transform: scale(0.68);
+  }
+  12% {
+    transform: scale(0.73);
+  }
+  13% {
+    transform: scale(0.78);
+  }
+  14% {
+    transform: scale(0.82);
+  }
+  15% {
+    transform: scale(0.86);
+  }
+  16% {
+    transform: scale(0.89);
+  }
+  17% {
+    transform: scale(0.92);
+  }
+  18% {
+    transform: scale(0.95);
+  }
+  19% {
+    transform: scale(0.97);
+  }
+  20% {
+    transform: scale(0.98);
+  }
+  21% {
+    transform: scale(1);
+  }
+  22% {
+    transform: scale(1.01);
+  }
+  23% {
+    transform: scale(1.02);
+  }
+  24% {
+    transform: scale(1.02);
+  }
+  25% {
+    transform: scale(1.03);
+  }
+  27% {
+    transform: scale(1.03);
+  }
+  28% {
+    transform: scale(1.04);
+  }
+  29% {
+    transform: scale(1.04);
+  }
+  30% {
+    transform: scale(1.03);
+  }
+  34% {
+    transform: scale(1.03);
+  }
+  35% {
+    transform: scale(1.02);
+  }
+  39% {
+    transform: scale(1.02);
+  }
+  40% {
+    transform: scale(1.01);
+  }
+  44% {
+    transform: scale(1.01);
+  }
+  45% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes leaveScale {
+  0% {
+    transform: scale(0.98);
+  }
+  1% {
+    transform: scale(0.94);
+  }
+  2% {
+    transform: scale(0.89);
+  }
+  3% {
+    transform: scale(0.83);
+  }
+  4% {
+    transform: scale(0.77);
+  }
+  5% {
+    transform: scale(0.7);
+  }
+  6% {
+    transform: scale(0.63);
+  }
+  7% {
+    transform: scale(0.56);
+  }
+  8% {
+    transform: scale(0.5);
+  }
+  9% {
+    transform: scale(0.43);
+  }
+  10% {
+    transform: scale(0.37);
+  }
+  11% {
+    transform: scale(0.32);
+  }
+  12% {
+    transform: scale(0.27);
+  }
+  13% {
+    transform: scale(0.22);
+  }
+  14% {
+    transform: scale(0.18);
+  }
+  15% {
+    transform: scale(0.14);
+  }
+  16% {
+    transform: scale(0.11);
+  }
+  17% {
+    transform: scale(0.08);
+  }
+  18% {
+    transform: scale(0.05);
+  }
+  19% {
+    transform: scale(0.03);
+  }
+  20% {
+    transform: scale(0.02);
+  }
+  21% {
+    transform: scale(0);
+  }
+  22% {
+    transform: scale(-0.01);
+  }
+  23% {
+    transform: scale(-0.02);
+  }
+  24% {
+    transform: scale(-0.02);
+  }
+  25% {
+    transform: scale(-0.03);
+  }
+  27% {
+    transform: scale(-0.03);
+  }
+  28% {
+    transform: scale(-0.04);
+  }
+  29% {
+    transform: scale(-0.04);
+  }
+  30% {
+    transform: scale(-0.03);
+  }
+  34% {
+    transform: scale(-0.03);
+  }
+  35% {
+    transform: scale(-0.02);
+  }
+  39% {
+    transform: scale(-0.02);
+  }
+  40% {
+    transform: scale(-0.01);
+  }
+  44% {
+    transform: scale(-0.01);
+  }
+  45% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}

@@ -54,7 +54,14 @@
     },
     "componentsDefaultDirectory": "src/app/components/{name}",
     "packageManager": "yarn",
-    "saveDependenciesAsComponents": true
+    "saveDependenciesAsComponents": true,
+    "overrides": {
+      "sass": {
+        "env": {
+          "compiler": "-"
+        }
+      }
+    }
   },
   "ngPackage": {
     "lib": {
