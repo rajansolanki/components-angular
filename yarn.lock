@@ -181,6 +181,11 @@
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-9.1.4.tgz#85f5322f42cf8add597fc6b02913e8fc3308c361"
   integrity sha512-ND240vncmVD2KVe/KSQU3d/DxxoRipFg1+jFOFZGt0n0orCBHk/V1fu9iaG1sRyldL0+rCQ+fTI+1N4DTmMnxA==
 
+"@angular/elements@^9.1.4":
+  version "9.1.4"
+  resolved "https://registry.yarnpkg.com/@angular/elements/-/elements-9.1.4.tgz#b3bedbce72a2d61493f2cab4a09dadd1117cd91a"
+  integrity sha512-VXb+/eZv2x8CsDESnk8ICysDE3C2Htuj76WiG6NO4X1aX26XLTvnT5YLnOJ+8l8L88eh6s80Rphw6Gr6amUXHA==
+
 "@angular/language-service@~9.1.4":
   version "9.1.4"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-9.1.4.tgz#2fa2c444e5a5a6036d5ca43d2887826df17d0553"

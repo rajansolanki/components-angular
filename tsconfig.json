@@ -26,7 +26,11 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "target": "es2015",
-    "lib": ["es2018", "dom"]
+    "lib": ["es2018", "dom"],
+    "paths": {
+      "@bit/rajansolanki.dev.*": ["./src/app/components/*"],
+      "routes": ["./src/app/routes"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

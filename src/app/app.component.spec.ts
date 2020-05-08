@@ -44,7 +44,35 @@ describe('`AppComponent`', () => {
     expect(comp).toBeTruthy();
   });
 
+  describe('`ngOnInit`', () => {
+    beforeEach(() => {
+      comp.routes = undefined as any;
+      comp.ngOnInit();
+    });
+
+    it('should set `routes` as `Router` `config`', () => {
+      expect(comp.routes).toEqual([
+        { path: 'page-1', component: Page1 },
+        { path: 'page-2', component: Page2 },
+      ]);
+    });
+  });
+
   describe('Template', () => {
+    describe('Links', () => {
+      it('should be displayed', () => {
+        expect(page.links).toHaveLength(2);
+      });
+
+      it('should display `route` `path` in titlecase', () => {
+        expect((page.links[0].textContent as string).trim()).toBe('Page-1');
+      });
+
+      it('should set `href`', () => {
+        expect(page.links[0].href).toBe('http://localhost/page-1');
+      });
+    });
+
     it('should display routed component', async () => {
       expect(page.page1).toBeFalsy();
       expect(page.page2).toBeFalsy();
@@ -61,6 +89,9 @@ describe('`AppComponent`', () => {
 });
 
 class Page {
+  get links(): HTMLAnchorElement[] {
+    return this.queryAll<HTMLAnchorElement>('a');
+  }
   get page1(): HTMLDivElement {
     return this.query<HTMLDivElement>('#page-1');
   }
@@ -70,6 +101,9 @@ class Page {
 
   private query<T>(selector: string): T {
     return fixture.nativeElement.querySelector(selector);
+  }
+  private queryAll<T>(selector: string): T[] {
+    return fixture.nativeElement.querySelectorAll(selector);
   }
 }
 

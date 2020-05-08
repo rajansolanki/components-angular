@@ -1,0 +1,5 @@
+<ng-container componentMasonry>
+  <div *ngFor="let product of products; trackBy: productTrackBy" #masonry>
+    <img [src]="product.node.images.edges[0].node.src" />
+  </div>
+</ng-container>

@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { MasonryComponent } from 'routes';
+
+const routes: Routes = [
+  {
+    path: 'masonry',
+    component: MasonryComponent,
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
