@@ -70,6 +70,14 @@
           "zone.js": ">=0.10.0"
         }
       },
+      "error": {
+        "dependencies": {
+          "@angular/animations": "-"
+        },
+        "peerDependencies": {
+          "@angular/animations": ">=8.0.0"
+        }
+      },
       "sass": {
         "env": {
           "compiler": "-"
