@@ -78,6 +78,15 @@
           "@angular/animations": ">=8.0.0"
         }
       },
+      "load-more": {
+        "dependencies": {
+          "rxjs": "-"
+        },
+        "peerDependencies": {
+          "rxjs": ">=6.0.0"
+        },
+        "propagate": true
+      },
       "sass": {
         "env": {
           "compiler": "-"

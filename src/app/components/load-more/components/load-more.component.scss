@@ -1,0 +1,66 @@
+@import 'src/app/components/sass/reset', 'src/app/components/sass/mixins';
+
+button {
+  @extend %button;
+  @include hoverScale(1.1, 0.9);
+}
+
+:host {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: $button-padding;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
+    Arial, sans-serif;
+  @include font(body-1);
+}
+
+#load-more {
+  overflow: hidden;
+  color: $red-secondary-text;
+
+  #hexagon {
+    cursor: pointer;
+
+    &.loading {
+      animation: spin 2s linear infinite;
+    }
+
+    svg {
+      height: 1.75em;
+      width: auto;
+      padding: 0.5em;
+    }
+  }
+
+  div:not(#hexagon) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: $button-padding;
+    background: $red-secondary;
+    border-radius: $button-border-radius;
+
+    & > * {
+      margin: $button-padding;
+    }
+
+    button {
+      flex-grow: 10;
+      text-align: center;
+      @include innerButtonBackground($red-secondary);
+      color: $red-secondary-text;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
