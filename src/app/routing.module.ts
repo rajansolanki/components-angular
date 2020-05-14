@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { MasonryComponent, ErrorComponent } from 'routes';
+import { MasonryComponent, ErrorComponent, LoadMoreComponent } from 'routes';
 
 const routes: Routes = [
   {
@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'error',
     component: ErrorComponent,
+  },
+  {
+    path: 'load-more',
+    component: LoadMoreComponent,
   },
 ];
 

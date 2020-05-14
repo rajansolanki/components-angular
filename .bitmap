@@ -43,6 +43,48 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "rajansolanki.dev/load-more@1.0.0": {
+        "files": [
+            {
+                "relativePath": "src/app/components/load-more/components/load-more.component.helpers.ts",
+                "test": false,
+                "name": "load-more.component.helpers.ts"
+            },
+            {
+                "relativePath": "src/app/components/load-more/components/load-more.component.html",
+                "test": false,
+                "name": "load-more.component.html"
+            },
+            {
+                "relativePath": "src/app/components/load-more/components/load-more.component.scss",
+                "test": false,
+                "name": "load-more.component.scss"
+            },
+            {
+                "relativePath": "src/app/components/load-more/components/load-more.component.ts",
+                "test": false,
+                "name": "load-more.component.ts"
+            },
+            {
+                "relativePath": "src/app/components/load-more/index.ts",
+                "test": false,
+                "name": "index.ts"
+            },
+            {
+                "relativePath": "src/app/components/load-more/load-more.module.ts",
+                "test": false,
+                "name": "load-more.module.ts"
+            },
+            {
+                "relativePath": "src/app/components/load-more/setup.ts",
+                "test": false,
+                "name": "setup.ts"
+            }
+        ],
+        "mainFile": "src/app/components/load-more/index.ts",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "rajansolanki.dev/masonry@1.0.0": {
         "files": [
             {
