@@ -1,0 +1,53 @@
+@import 'src/app/components/sass/mixins';
+
+$transition-hover: 0.15s linear;
+
+@mixin active {
+  background: $red-gradient !important;
+  color: $white !important;
+
+  &::before {
+    opacity: 1;
+  }
+}
+
+@mixin appHover {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  background: inherit;
+  color: inherit;
+  transition: color $transition-hover, background $transition-hover;
+
+  & > * {
+    position: relative;
+    pointer-events: none;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -200%;
+    left: -200%;
+    right: 0;
+    bottom: 0;
+    width: 600%;
+    height: 600%;
+    background-image: radial-gradient(
+      circle closest-side,
+      $blue-gradient,
+      $red-gradient
+    );
+    transform: translate(var(--x), var(--y));
+    opacity: 0;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      @include active;
+    }
+  }
+  &:active {
+    @include active;
+  }
+}

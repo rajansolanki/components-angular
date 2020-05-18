@@ -1,0 +1,41 @@
+<ng-container *ngIf="item">
+  <div class="cart-item">
+    <button
+      class="item-remove"
+      (click)="handleRemoveClick()"
+      aria-label="Remove"
+    ></button>
+    <div class="item-content">
+      <div class="content-titles">
+        <div class="product-title">
+          {{ item.title }}
+        </div>
+        <div class="variant-title">
+          {{ item.variant.title }}
+        </div>
+      </div>
+
+      <div class="content-meta">
+        <div class="quantity">
+          <button
+            class="quantity-minus"
+            [attr.disabled]="item.quantity <= 1 || null"
+            (click)="handleUpdateClick('-1')"
+          >
+            &#8722;
+          </button>
+          <div class="current-quantity">{{ item.quantity }}</div>
+          <button class="quantity-plus" (click)="handleUpdateClick('1')">
+            &#43;
+          </button>
+        </div>
+        <div class="prices">
+          <div class="previous-price" *ngIf="item.variant?.compareAtPrice">
+            £{{ item.variant.compareAtPrice }}
+          </div>
+          <div class="current-price">£{{ item.variant.price }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
