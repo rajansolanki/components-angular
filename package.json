@@ -24,6 +24,7 @@
     "@angular/platform-browser": "~9.1.4",
     "@angular/platform-browser-dynamic": "~9.1.4",
     "@angular/router": "~9.1.4",
+    "popmotion-pose": "^3.4.11",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -84,6 +85,26 @@
         },
         "peerDependencies": {
           "rxjs": ">=6.0.0"
+        },
+        "propagate": true
+      },
+      "cart": {
+        "dependencies": {
+          "rxjs": "-",
+          "popmotion-pose": "-"
+        },
+        "peerDependencies": {
+          "rxjs": ">=6.0.0",
+          "popmotion-pose": ">=3.4.0"
+        },
+        "propagate": true
+      },
+      "shared": {
+        "dependencies": {
+          "@angular/animations": "-"
+        },
+        "peerDependencies": {
+          "@angular/animations": ">=8.0.0"
         },
         "propagate": true
       },

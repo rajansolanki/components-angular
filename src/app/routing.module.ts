@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { MasonryComponent, ErrorComponent, LoadMoreComponent } from 'routes';
+import {
+  MasonryComponent,
+  ErrorComponent,
+  LoadMoreComponent,
+  CartComponent,
+} from 'routes';
 
 const routes: Routes = [
   {
@@ -15,6 +20,10 @@ const routes: Routes = [
   {
     path: 'load-more',
     component: LoadMoreComponent,
+  },
+  {
+    path: 'cart',
+    component: CartComponent,
   },
 ];
 

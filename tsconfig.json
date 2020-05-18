@@ -26,7 +26,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "target": "es2015",
-    "lib": ["es2018", "dom"],
+    "lib": ["es2018", "dom", "dom.iterable"],
     "paths": {
       "@bit/rajansolanki.dev.*": ["./src/app/components/*"],
       "routes": ["./src/app/routes"]

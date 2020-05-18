@@ -3,7 +3,12 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { RoutingModule } from './routing.module';
 import { AppComponent } from './app.component';
-import { MasonryComponent, ErrorComponent, LoadMoreComponent } from 'routes';
+import {
+  MasonryComponent,
+  ErrorComponent,
+  LoadMoreComponent,
+  CartComponent,
+} from 'routes';
 import './components';
 
 @NgModule({
@@ -12,6 +17,7 @@ import './components';
     MasonryComponent,
     ErrorComponent,
     LoadMoreComponent,
+    CartComponent,
   ],
   imports: [BrowserModule, RoutingModule],
   bootstrap: [AppComponent],

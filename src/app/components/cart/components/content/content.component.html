@@ -1,0 +1,26 @@
+<ng-container *ngIf="checkout">
+  <div id="header">
+    <h3>Cart</h3>
+
+    <span id="items-count">
+      {{ checkout.lineItems.length }}
+    </span>
+  </div>
+
+  <div id="info">
+    <div id="info-items">
+      <app-cart-item
+        *ngFor="let item of checkout.lineItems; trackBy: itemTrackBy"
+        [item]="item"
+        (itemChange)="handleItemChange($event)"
+      ></app-cart-item>
+    </div>
+
+    <div id="info-footer">
+      <div id="total">£{{ checkout.totalPrice }}</div>
+      <a id="link" [class.disabled]="!checkout.ready" appHover>
+        <span>Checkout</span><i></i>
+      </a>
+    </div>
+  </div>
+</ng-container>

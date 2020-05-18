@@ -25,3 +25,22 @@ export interface BasicProductNode {
 export interface BasicProduct {
   node: BasicProductNode;
 }
+
+export interface CheckoutItem_node_variant {
+  title: string;
+  price: string;
+  compareAtPrice: string | null;
+}
+
+export interface CheckoutItem {
+  id: string;
+  title: string;
+  quantity: number;
+  variant: CheckoutItem_node_variant;
+}
+
+export interface Checkout {
+  totalPrice: string;
+  ready: boolean;
+  lineItems: CheckoutItem[];
+}

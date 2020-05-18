@@ -1,0 +1,6 @@
+<ng-container *ngIf="checkout$ | async as checkout">
+  <app-content
+    *ngIf="checkout.lineItems.length"
+    [checkout]="checkout"
+  ></app-content>
+</ng-container>
