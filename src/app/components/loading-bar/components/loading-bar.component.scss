@@ -1,0 +1,41 @@
+@import 'src/app/components/sass/reset', 'src/app/components/sass/mixins';
+
+:host {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $banner-height;
+  background: $black;
+}
+
+div {
+  height: 100%;
+
+  &.loading {
+    background: linear-gradient(
+      to right,
+      $blue-gradient,
+      $red-gradient,
+      $blue-gradient
+    );
+    background-size: 1000%;
+    animation: rainbow 6s linear infinite forwards;
+  }
+
+  &.error {
+    background: red;
+  }
+}
+
+@keyframes rainbow {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+}
