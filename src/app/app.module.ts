@@ -8,6 +8,7 @@ import {
   ErrorComponent,
   LoadMoreComponent,
   CartComponent,
+  LoadingBarComponent,
 } from 'routes';
 import './components';
 
@@ -18,6 +19,7 @@ import './components';
     ErrorComponent,
     LoadMoreComponent,
     CartComponent,
+    LoadingBarComponent,
   ],
   imports: [BrowserModule, RoutingModule],
   bootstrap: [AppComponent],

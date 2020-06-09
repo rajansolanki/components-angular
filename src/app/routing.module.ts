@@ -6,6 +6,7 @@ import {
   ErrorComponent,
   LoadMoreComponent,
   CartComponent,
+  LoadingBarComponent,
 } from 'routes';
 
 const routes: Routes = [
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'cart',
     component: CartComponent,
+  },
+  {
+    path: 'loading-bar',
+    component: LoadingBarComponent,
   },
 ];
 

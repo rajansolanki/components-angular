@@ -197,6 +197,43 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "rajansolanki.dev/loading-bar@1.0.0": {
+        "files": [
+            {
+                "relativePath": "src/app/components/loading-bar/components/loading-bar.component.html",
+                "test": false,
+                "name": "loading-bar.component.html"
+            },
+            {
+                "relativePath": "src/app/components/loading-bar/components/loading-bar.component.scss",
+                "test": false,
+                "name": "loading-bar.component.scss"
+            },
+            {
+                "relativePath": "src/app/components/loading-bar/components/loading-bar.component.ts",
+                "test": false,
+                "name": "loading-bar.component.ts"
+            },
+            {
+                "relativePath": "src/app/components/loading-bar/index.ts",
+                "test": false,
+                "name": "index.ts"
+            },
+            {
+                "relativePath": "src/app/components/loading-bar/loading-bar.module.ts",
+                "test": false,
+                "name": "loading-bar.module.ts"
+            },
+            {
+                "relativePath": "src/app/components/loading-bar/setup.ts",
+                "test": false,
+                "name": "setup.ts"
+            }
+        ],
+        "mainFile": "src/app/components/loading-bar/index.ts",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "rajansolanki.dev/masonry@1.0.1": {
         "files": [
             {
