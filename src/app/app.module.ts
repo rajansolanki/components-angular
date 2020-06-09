@@ -9,6 +9,7 @@ import {
   LoadMoreComponent,
   CartComponent,
   LoadingBarComponent,
+  HoverComponent,
 } from 'routes';
 import './components';
 
@@ -20,6 +21,7 @@ import './components';
     LoadMoreComponent,
     CartComponent,
     LoadingBarComponent,
+    HoverComponent,
   ],
   imports: [BrowserModule, RoutingModule],
   bootstrap: [AppComponent],

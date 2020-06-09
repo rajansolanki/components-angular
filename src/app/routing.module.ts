@@ -7,6 +7,7 @@ import {
   LoadMoreComponent,
   CartComponent,
   LoadingBarComponent,
+  HoverComponent,
 } from 'routes';
 
 const routes: Routes = [
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path: 'loading-bar',
     component: LoadingBarComponent,
+  },
+  {
+    path: 'hover',
+    component: HoverComponent,
   },
 ];
 

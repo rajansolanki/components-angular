@@ -155,6 +155,53 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "rajansolanki.dev/hover@1.0.0": {
+        "files": [
+            {
+                "relativePath": "src/app/components/hover/components/hover.component.html",
+                "test": false,
+                "name": "hover.component.html"
+            },
+            {
+                "relativePath": "src/app/components/hover/components/hover.component.scss",
+                "test": false,
+                "name": "hover.component.scss"
+            },
+            {
+                "relativePath": "src/app/components/hover/components/hover.component.ts",
+                "test": false,
+                "name": "hover.component.ts"
+            },
+            {
+                "relativePath": "src/app/components/hover/directives/hover.directive.helpers.ts",
+                "test": false,
+                "name": "hover.directive.helpers.ts"
+            },
+            {
+                "relativePath": "src/app/components/hover/directives/hover.directive.ts",
+                "test": false,
+                "name": "hover.directive.ts"
+            },
+            {
+                "relativePath": "src/app/components/hover/hover.module.ts",
+                "test": false,
+                "name": "hover.module.ts"
+            },
+            {
+                "relativePath": "src/app/components/hover/index.ts",
+                "test": false,
+                "name": "index.ts"
+            },
+            {
+                "relativePath": "src/app/components/hover/setup.ts",
+                "test": false,
+                "name": "setup.ts"
+            }
+        ],
+        "mainFile": "src/app/components/hover/index.ts",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "rajansolanki.dev/load-more@1.0.1": {
         "files": [
             {
