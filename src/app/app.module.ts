@@ -11,6 +11,7 @@ import {
   LoadingBarComponent,
   HoverComponent,
   SearchComponent,
+  SlideComponent,
 } from 'routes';
 import './components';
 
@@ -24,6 +25,7 @@ import './components';
     LoadingBarComponent,
     HoverComponent,
     SearchComponent,
+    SlideComponent,
   ],
   imports: [BrowserModule, RoutingModule],
   bootstrap: [AppComponent],

@@ -465,5 +465,62 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "rajansolanki.dev/slide@1.0.0": {
+        "files": [
+            {
+                "relativePath": "src/app/components/slide/components/image/image.component.html",
+                "test": false,
+                "name": "image.component.html"
+            },
+            {
+                "relativePath": "src/app/components/slide/components/image/image.component.scss",
+                "test": false,
+                "name": "image.component.scss"
+            },
+            {
+                "relativePath": "src/app/components/slide/components/image/image.component.ts",
+                "test": false,
+                "name": "image.component.ts"
+            },
+            {
+                "relativePath": "src/app/components/slide/components/slide.component.html",
+                "test": false,
+                "name": "slide.component.html"
+            },
+            {
+                "relativePath": "src/app/components/slide/components/slide.component.scss",
+                "test": false,
+                "name": "slide.component.scss"
+            },
+            {
+                "relativePath": "src/app/components/slide/components/slide.component.ts",
+                "test": false,
+                "name": "slide.component.ts"
+            },
+            {
+                "relativePath": "src/app/components/slide/data.ts",
+                "test": false,
+                "name": "data.ts"
+            },
+            {
+                "relativePath": "src/app/components/slide/index.ts",
+                "test": false,
+                "name": "index.ts"
+            },
+            {
+                "relativePath": "src/app/components/slide/setup.ts",
+                "test": false,
+                "name": "setup.ts"
+            },
+            {
+                "relativePath": "src/app/components/slide/slide.module.ts",
+                "test": false,
+                "name": "slide.module.ts"
+            }
+        ],
+        "mainFile": "src/app/components/slide/index.ts",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "version": "14.7.6"
 }

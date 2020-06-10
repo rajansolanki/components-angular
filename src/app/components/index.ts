@@ -5,6 +5,7 @@ import setupCart from './cart';
 import setupLoadingBar from './loading-bar';
 import setupHover from './hover';
 import setupSearch from './search';
+import setupSlide from './slide';
 
 setupMasonry();
 setupError();
@@ -13,3 +14,4 @@ setupCart();
 setupLoadingBar();
 setupHover();
 setupSearch();
+setupSlide();
