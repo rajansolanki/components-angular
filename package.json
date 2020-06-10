@@ -21,9 +21,11 @@
     "@angular/compiler": "~9.1.4",
     "@angular/core": "~9.1.4",
     "@angular/elements": "^9.1.4",
+    "@angular/forms": "9.1.4",
     "@angular/platform-browser": "~9.1.4",
     "@angular/platform-browser-dynamic": "~9.1.4",
     "@angular/router": "~9.1.4",
+    "fuse.js": "^6.0.4",
     "popmotion-pose": "^3.4.11",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
@@ -94,6 +96,19 @@
           "popmotion-pose": "-"
         },
         "peerDependencies": {
+          "rxjs": ">=6.0.0",
+          "popmotion-pose": ">=3.4.0"
+        },
+        "propagate": true
+      },
+      "search": {
+        "dependencies": {
+          "@angular/forms": "-",
+          "rxjs": "-",
+          "popmotion-pose": "-"
+        },
+        "peerDependencies": {
+          "@angular/forms": ">=8.0.0",
           "rxjs": ">=6.0.0",
           "popmotion-pose": ">=3.4.0"
         },

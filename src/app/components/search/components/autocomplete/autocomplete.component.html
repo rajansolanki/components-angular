@@ -1,0 +1,7 @@
+<component-option
+  *ngFor="let tag of tags; trackBy: tagTrackBy"
+  (click)="handleOptionClick(tag)"
+  role="option"
+>
+  {{ tag }}
+</component-option>
