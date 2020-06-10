@@ -1,0 +1,25 @@
+<div id="search-bar">
+  <input
+    type="text"
+    [formControl]="control"
+    placeholder="LAURA LEA"
+    role="searchbox"
+    aria-label="Search"
+    aria-autocomplete="list"
+    aria-owns="autocomplete"
+  />
+  <button
+    id="clear"
+    *ngIf="control.value"
+    (click)="handleClearClick()"
+    aria-label="Clear search"
+  ></button>
+</div>
+
+<component-autocomplete
+  id="autocomplete"
+  *ngIf="control.dirty"
+  [control]="control"
+  [tags]="tags$ | async"
+  role="listbox"
+></component-autocomplete>

@@ -361,6 +361,88 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "rajansolanki.dev/search@1.0.0": {
+        "files": [
+            {
+                "relativePath": "src/app/components/search/components/autocomplete/autocomplete.animations.ts",
+                "test": false,
+                "name": "autocomplete.animations.ts"
+            },
+            {
+                "relativePath": "src/app/components/search/components/autocomplete/autocomplete.component.html",
+                "test": false,
+                "name": "autocomplete.component.html"
+            },
+            {
+                "relativePath": "src/app/components/search/components/autocomplete/autocomplete.component.scss",
+                "test": false,
+                "name": "autocomplete.component.scss"
+            },
+            {
+                "relativePath": "src/app/components/search/components/autocomplete/autocomplete.component.ts",
+                "test": false,
+                "name": "autocomplete.component.ts"
+            },
+            {
+                "relativePath": "src/app/components/search/components/autocomplete/option/option.animations.ts",
+                "test": false,
+                "name": "option.animations.ts"
+            },
+            {
+                "relativePath": "src/app/components/search/components/autocomplete/option/option.component.html",
+                "test": false,
+                "name": "option.component.html"
+            },
+            {
+                "relativePath": "src/app/components/search/components/autocomplete/option/option.component.scss",
+                "test": false,
+                "name": "option.component.scss"
+            },
+            {
+                "relativePath": "src/app/components/search/components/autocomplete/option/option.component.ts",
+                "test": false,
+                "name": "option.component.ts"
+            },
+            {
+                "relativePath": "src/app/components/search/components/search.component.html",
+                "test": false,
+                "name": "search.component.html"
+            },
+            {
+                "relativePath": "src/app/components/search/components/search.component.scss",
+                "test": false,
+                "name": "search.component.scss"
+            },
+            {
+                "relativePath": "src/app/components/search/components/search.component.ts",
+                "test": false,
+                "name": "search.component.ts"
+            },
+            {
+                "relativePath": "src/app/components/search/data.ts",
+                "test": false,
+                "name": "data.ts"
+            },
+            {
+                "relativePath": "src/app/components/search/index.ts",
+                "test": false,
+                "name": "index.ts"
+            },
+            {
+                "relativePath": "src/app/components/search/search.module.ts",
+                "test": false,
+                "name": "search.module.ts"
+            },
+            {
+                "relativePath": "src/app/components/search/setup.ts",
+                "test": false,
+                "name": "setup.ts"
+            }
+        ],
+        "mainFile": "src/app/components/search/index.ts",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "rajansolanki.dev/shared@1.1.0": {
         "files": [
             {

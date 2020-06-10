@@ -8,6 +8,7 @@ import {
   CartComponent,
   LoadingBarComponent,
   HoverComponent,
+  SearchComponent,
 } from 'routes';
 
 const routes: Routes = [
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'hover',
     component: HoverComponent,
+  },
+  {
+    path: 'search',
+    component: SearchComponent,
   },
 ];
 
