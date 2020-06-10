@@ -114,6 +114,15 @@
         },
         "propagate": true
       },
+      "slide": {
+        "dependencies": {
+          "rxjs": "-"
+        },
+        "peerDependencies": {
+          "rxjs": ">=6.0.0"
+        },
+        "propagate": true
+      },
       "shared": {
         "dependencies": {
           "@angular/animations": "-"

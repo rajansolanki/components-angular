@@ -1,0 +1,47 @@
+@import 'src/app/components/sass/reset', 'src/app/components/sass/mixins';
+
+$arrow-length: 0.6em;
+$arrow-thickness: 0.1em;
+
+:host {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#variant-select {
+  flex-shrink: 0;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  margin: 0.5em 0;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
+    Arial, sans-serif;
+  @include font(subheading-2);
+
+  select {
+    overflow: hidden;
+    display: block;
+    width: 150px;
+    margin: 0;
+    padding: $button-padding;
+    padding-right: $arrow-length * 4;
+    background: $white;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-radius: $button-border-radius;
+  }
+
+  i {
+    @include arrowButton(
+      $arrow-length,
+      $arrow-thickness,
+      $arrow-length * 1.5,
+      $black,
+      $black
+    );
+    position: static;
+  }
+}

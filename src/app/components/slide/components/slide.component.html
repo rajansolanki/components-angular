@@ -1,0 +1,13 @@
+<div id="variant-select">
+  <select (change)="handleChange($event)" aria-label="Variant select">
+    <option
+      *ngFor="let variant of variants; let i = index; trackBy: variantTrackBy"
+      [value]="i"
+    >
+      {{ variant.title }}
+    </option>
+  </select>
+  <i></i>
+</div>
+
+<component-image [variant]="variantChange$ | async"></component-image>
