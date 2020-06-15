@@ -1,11 +1,6 @@
 @import 'src/app/components/sass/reset', 'src/app/components/sass/mixins';
 
-button {
-  @extend %button;
-}
-
-a,
-button {
+a {
   @include hoverScale(1.1, 0.9);
 }
 
@@ -39,8 +34,7 @@ button {
       display: flex;
       margin: 0.25em (-$button-padding);
 
-      a,
-      button {
+      a {
         display: block;
         margin: $button-padding;
         padding: $button-padding;
@@ -56,8 +50,7 @@ button {
   animation: reveal 0.4s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 
   .banner-actions {
-    a,
-    button {
+    a {
       @include innerButtonBackground($red-primary);
       color: $white-text-primary;
     }
@@ -69,8 +62,7 @@ button {
   color: $red-secondary-text;
 
   .banner-actions {
-    a,
-    button {
+    a {
       @include innerButtonBackground($red-secondary);
       color: $red-secondary-text;
     }

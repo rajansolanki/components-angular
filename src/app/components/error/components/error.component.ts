@@ -1,18 +1,15 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { errorAnimations } from './error.animations';
+
+export type ErrorType = 'app' | 'global';
 
 @Component({
   selector: 'component-error',
   templateUrl: './error.component.html',
   styleUrls: ['./error.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: errorAnimations,
 })
 export class ErrorComponent {
-  showAppError = true;
-
-  handleAppClick(): void {
-    this.showAppError = false;
-  }
+  @Input() type: ErrorType | undefined;
 }

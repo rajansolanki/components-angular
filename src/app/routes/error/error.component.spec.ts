@@ -27,6 +27,10 @@ describe('`ErrorComponent`', () => {
     it('should display web component', () => {
       expect(page.component).toBeTruthy();
     });
+
+    it('should set `type`', () => {
+      expect(page.component.getAttribute('type')).toBe('app');
+    });
   });
 });
 

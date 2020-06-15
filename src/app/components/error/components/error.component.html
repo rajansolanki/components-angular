@@ -1,15 +1,15 @@
 <div
   id="banner-global"
   class="banner"
-  *ngIf="!showAppError"
+  *ngIf="type === 'global'"
   role="alertdialog"
   aria-labelledby="banner-global-error"
 >
   <div class="banner-container" tabindex="0">
     <p id="banner-global-error">Oops, an error occurred</p>
     <div class="banner-actions">
-      <a id="banner-global-action-home">Back to products</a>
-      <a id="banner-global-action-reload">Reload</a>
+      <a>Back to products</a>
+      <a>Reload</a>
     </div>
   </div>
 </div>
@@ -17,7 +17,7 @@
 <div
   id="banner-app"
   class="banner"
-  *ngIf="showAppError"
+  *ngIf="type === 'app'"
   @enterLeave
   role="alertdialog"
   aria-labelledby="banner-app-error"
@@ -25,12 +25,12 @@
   <div class="banner-container" tabindex="0">
     <p id="banner-app-error">Couldn&rsquo;t load products</p>
     <div class="banner-actions">
-      <button (click)="handleAppClick()">
+      <a>
         Dismiss
-      </button>
-      <button (click)="handleAppClick()">
+      </a>
+      <a>
         Retry
-      </button>
+      </a>
     </div>
   </div>
 </div>
