@@ -1,17 +1,28 @@
+import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { By } from '@angular/platform-browser';
 
-import { ErrorComponent } from './error.component';
+import { ErrorComponent, ErrorType } from './error.component';
 
+let compHost: TestHostComponent;
 let comp: ErrorComponent;
-let fixture: ComponentFixture<ErrorComponent>;
+let fixture: ComponentFixture<TestHostComponent>;
 let page: Page;
+
+@Component({
+  selector: 'app-host',
+  template: '<component-error [type]="type"></component-error>',
+})
+class TestHostComponent {
+  type: ErrorType | undefined;
+}
 
 describe('`ErrorComponent`', () => {
   beforeEach(async(() =>
     TestBed.configureTestingModule({
       imports: [NoopAnimationsModule],
-      declarations: [ErrorComponent],
+      declarations: [TestHostComponent, ErrorComponent],
     }).compileComponents()));
 
   beforeEach(jest.clearAllMocks);
@@ -23,49 +34,34 @@ describe('`ErrorComponent`', () => {
     expect(comp).toBeTruthy();
   });
 
-  describe('`handleAppClick`', () => {
-    it('should set `showAppError` as `false`', () => {
-      comp.showAppError = true;
-      comp.handleAppClick();
-
-      expect(comp.showAppError).toBe(false);
-    });
-  });
-
   describe('Template', () => {
-    describe('Global error', () => {
-      it('should not be displayed', () => {
-        expect(page.globalError).toBeFalsy();
+    describe('`type` is global', () => {
+      beforeEach(() => {
+        compHost.type = 'global';
+        fixture.detectChanges();
       });
 
-      it('should be displayed on app error buttons click', () => {
-        page.appErrorButtons[0].click();
-        fixture.detectChanges();
-
+      it('should display global error', () => {
         expect(page.globalError).toBeTruthy();
       });
+
+      it('should not display app error', () => {
+        expect(page.appError).toBeFalsy();
+      });
     });
 
-    describe('App error', () => {
-      it('should be displayed', () => {
+    describe('`type` is app', () => {
+      beforeEach(() => {
+        compHost.type = 'app';
+        fixture.detectChanges();
+      });
+
+      it('should display app error', () => {
         expect(page.appError).toBeTruthy();
       });
 
-      it('should not be displayed on error buttons click', async () => {
-        page.appErrorButtons[0].click();
-        fixture.detectChanges();
-        await fixture.whenStable();
-
-        expect(page.appError).toBeFalsy();
-      });
-
-      describe('Buttons', () => {
-        it('should call `handleAppClick`', () => {
-          page.appErrorButtons[0].click();
-          expect(comp.handleAppClick).toHaveBeenCalledTimes(1);
-          page.appErrorButtons[1].click();
-          expect(comp.handleAppClick).toHaveBeenCalledTimes(2);
-        });
+      it('should not display global error', () => {
+        expect(page.globalError).toBeFalsy();
       });
     });
   });
@@ -78,24 +74,19 @@ class Page {
   get appError(): HTMLDivElement {
     return this.query<HTMLDivElement>('#banner-app');
   }
-  get appErrorButtons(): HTMLButtonElement[] {
-    return this.queryAll<HTMLButtonElement>('#banner-app button');
-  }
 
   private query<T>(selector: string): T {
     return fixture.nativeElement.querySelector(selector);
   }
-  private queryAll<T>(selector: string): T[] {
-    return fixture.nativeElement.querySelectorAll(selector);
-  }
 }
 
 async function createComponent(): Promise<void> {
-  fixture = TestBed.createComponent(ErrorComponent);
-  comp = fixture.componentInstance;
+  fixture = TestBed.createComponent(TestHostComponent);
+  compHost = fixture.componentInstance;
+  comp = fixture.debugElement
+    .query(By.directive(ErrorComponent))
+    .injector.get<ErrorComponent>(ErrorComponent);
   page = new Page();
-
-  jest.spyOn(comp, 'handleAppClick');
 
   fixture.detectChanges();
   await fixture.whenStable();

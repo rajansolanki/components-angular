@@ -1,10 +1,10 @@
 import { NgElement, WithProperties } from '@angular/elements';
 
-import { ErrorComponent } from './components/error.component';
+import { ErrorComponent, ErrorType } from './components/error.component';
 import { ErrorModule, NAME } from './error.module';
 import { setup } from './setup';
 
-type ComponentProps = WithProperties<Pick<ErrorComponent, never>>;
+type ComponentProps = WithProperties<Pick<ErrorComponent, 'type'>>;
 
 declare global {
   interface HTMLElementTagNameMap {
@@ -18,4 +18,4 @@ declare global {
   }
 }
 
-export { setup as default, ErrorModule };
+export { setup as default, ErrorModule, ErrorType };
