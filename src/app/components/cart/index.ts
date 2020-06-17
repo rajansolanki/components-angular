@@ -4,7 +4,9 @@ import { CartComponent } from './components/cart.component';
 import { CartModule, NAME } from './cart.module';
 import { setup } from './setup';
 
-type ComponentProps = WithProperties<Pick<CartComponent, never>>;
+type ComponentProps = WithProperties<
+  Pick<CartComponent, never> & { ref?: any }
+>;
 
 declare global {
   interface HTMLElementTagNameMap {

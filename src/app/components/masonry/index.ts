@@ -4,7 +4,9 @@ import { MasonryComponent } from './components/masonry.component';
 import { MasonryModule, NAME } from './masonry.module';
 import { setup } from './setup';
 
-type ComponentProps = WithProperties<Pick<MasonryComponent, never>>;
+type ComponentProps = WithProperties<
+  Pick<MasonryComponent, never> & { ref?: any }
+>;
 
 declare global {
   interface HTMLElementTagNameMap {

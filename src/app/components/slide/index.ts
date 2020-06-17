@@ -4,7 +4,9 @@ import { SlideComponent } from './components/slide.component';
 import { SlideModule, NAME } from './slide.module';
 import { setup } from './setup';
 
-type ComponentProps = WithProperties<Pick<SlideComponent, never>>;
+type ComponentProps = WithProperties<
+  Pick<SlideComponent, never> & { ref?: any }
+>;
 
 declare global {
   interface HTMLElementTagNameMap {

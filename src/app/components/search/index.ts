@@ -4,7 +4,9 @@ import { SearchComponent } from './components/search.component';
 import { SearchModule, NAME } from './search.module';
 import { setup } from './setup';
 
-type ComponentProps = WithProperties<Pick<SearchComponent, never>>;
+type ComponentProps = WithProperties<
+  Pick<SearchComponent, never> & { ref?: any }
+>;
 
 declare global {
   interface HTMLElementTagNameMap {
