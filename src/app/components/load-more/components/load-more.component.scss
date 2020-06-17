@@ -21,8 +21,6 @@ button {
   color: $red-secondary-text;
 
   #hexagon {
-    cursor: pointer;
-
     &.loading {
       animation: spin 2s linear infinite;
     }
