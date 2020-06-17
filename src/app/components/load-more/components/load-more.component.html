@@ -1,6 +1,6 @@
 <div id="load-more">
   <ng-template #content>
-    <div id="hexagon" [class.loading]="data?.loading" (click)="handleTrigger()">
+    <div id="hexagon" [class.loading]="status === 'loading'">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 65">
         <path
           fill="#000"
@@ -10,8 +10,8 @@
     </div>
   </ng-template>
 
-  <div *ngIf="data?.loading === false && !data?.data; else content">
+  <div *ngIf="status === 'error'; else content">
     <p>Couldn&rsquo;t load more products</p>
-    <button (click)="handleTrigger()">Retry</button>
+    <button (click)="handleClick()">Retry</button>
   </div>
 </div>

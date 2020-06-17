@@ -202,13 +202,8 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "rajansolanki.dev/load-more@1.0.1": {
+    "rajansolanki.dev/load-more@2.0.1": {
         "files": [
-            {
-                "relativePath": "src/app/components/load-more/components/load-more.component.helpers.ts",
-                "test": false,
-                "name": "load-more.component.helpers.ts"
-            },
             {
                 "relativePath": "src/app/components/load-more/components/load-more.component.html",
                 "test": false,

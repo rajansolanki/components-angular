@@ -4,9 +4,17 @@ import { LoadMoreComponent } from './components/load-more.component';
 import { LoadMoreModule, NAME } from './load-more.module';
 import { setup } from './setup';
 
-type ComponentProps = WithProperties<Pick<LoadMoreComponent, never>>;
+type ComponentProps = WithProperties<Pick<LoadMoreComponent, 'status'>>;
 
 declare global {
+  interface CustomEventMap {
+    retryClick: CustomEvent;
+  }
+
+  interface ElementEventMap {
+    retryClick: CustomEventMap['retryClick'];
+  }
+
   interface HTMLElementTagNameMap {
     [NAME]: NgElement & ComponentProps;
   }
