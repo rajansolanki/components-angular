@@ -4,7 +4,9 @@ import { ErrorComponent, ErrorType } from './components/error.component';
 import { ErrorModule, NAME } from './error.module';
 import { setup } from './setup';
 
-type ComponentProps = WithProperties<Pick<ErrorComponent, 'type'>>;
+type ComponentProps = WithProperties<
+  Pick<ErrorComponent, 'type'> & { ref?: any }
+>;
 
 declare global {
   interface HTMLElementTagNameMap {

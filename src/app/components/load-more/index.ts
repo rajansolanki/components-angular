@@ -4,7 +4,9 @@ import { LoadMoreComponent } from './components/load-more.component';
 import { LoadMoreModule, NAME } from './load-more.module';
 import { setup } from './setup';
 
-type ComponentProps = WithProperties<Pick<LoadMoreComponent, 'status'>>;
+type ComponentProps = WithProperties<
+  Pick<LoadMoreComponent, 'status'> & { ref?: any }
+>;
 
 declare global {
   interface CustomEventMap {
