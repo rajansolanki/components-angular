@@ -6,18 +6,12 @@ import { bootstrapModule } from '@bit/rajansolanki.dev.shared';
 import { CartComponent } from './components/cart.component';
 import { CartContentComponent } from './components/content/content.component';
 import { CartItemComponent } from './components/content/item/item.component';
-import { HoverDirective } from './directives/hover.directive';
 import { CheckoutService } from './services/checkout.service';
 
 export const NAME = 'component-cart';
 
 @NgModule({
-  declarations: [
-    CartComponent,
-    CartContentComponent,
-    CartItemComponent,
-    HoverDirective,
-  ],
+  declarations: [CartComponent, CartContentComponent, CartItemComponent],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [CheckoutService],
   entryComponents: [CartComponent],
