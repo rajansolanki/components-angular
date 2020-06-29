@@ -6,7 +6,9 @@
     "build": "ng build",
     "lint": "ng lint",
     "test:spec": "jest",
-    "test:spec:watch": "jest --watch"
+    "test:spec:watch": "jest --watch",
+    "test:e2e": "start-test serve http://localhost:4200 '$(npm bin)/cypress run'",
+    "test:e2e:watch": "start-test serve http://localhost:4200 '$(npm bin)/cypress open'"
   },
   "private": true,
   "husky": {
@@ -41,12 +43,14 @@
     "@types/jest": "^25.2.1",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
+    "cypress": "^4.9.0",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
     "jest-junit": "^10.0.0",
     "jest-preset-angular": "^8.1.3",
     "lint-staged": "^10.2.2",
     "prettier": "^2.0.5",
+    "start-server-and-test": "^1.11.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "tslint-config-prettier": "^1.18.0",
