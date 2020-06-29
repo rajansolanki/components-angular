@@ -24,19 +24,59 @@ describe('`ErrorComponent`', () => {
   });
 
   describe('Template', () => {
+    beforeEach(() => {
+      comp.type = 'type' as any;
+      fixture.detectChanges();
+    });
+
     it('should display web component', () => {
       expect(page.component).toBeTruthy();
     });
 
-    it('should set `type`', () => {
-      expect(page.component.getAttribute('type')).toBe('app');
+    describe('App button', () => {
+      it('should set `type`', () => {
+        page.appButton.click();
+        fixture.detectChanges();
+
+        expect(comp.type).toBe('app');
+        expect((page.component as any).type).toBe('app');
+      });
+    });
+
+    describe('Global button', () => {
+      it('should set `type`', () => {
+        page.globalButton.click();
+        fixture.detectChanges();
+
+        expect(comp.type).toBe('global');
+        expect((page.component as any).type).toBe('global');
+      });
+    });
+
+    describe('Reset button', () => {
+      it('should set `type`', () => {
+        page.resetButton.click();
+        fixture.detectChanges();
+
+        expect(comp.type).toBe(undefined);
+        expect((page.component as any).type).toBe(undefined);
+      });
     });
   });
 });
 
 class Page {
-  get component(): HTMLDivElement {
-    return this.query<HTMLDivElement>('component-error');
+  get component(): HTMLElement {
+    return this.query<HTMLElement>('component-error');
+  }
+  get appButton(): HTMLButtonElement {
+    return this.query<HTMLButtonElement>('#button-app');
+  }
+  get globalButton(): HTMLButtonElement {
+    return this.query<HTMLButtonElement>('#button-global');
+  }
+  get resetButton(): HTMLButtonElement {
+    return this.query<HTMLButtonElement>('#button-reset');
   }
 
   private query<T>(selector: string): T {

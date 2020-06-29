@@ -1,0 +1,10 @@
+<component-load-more
+  [status]="status"
+  (retryClick)="handleRetryClick()"
+></component-load-more>
+
+<button id="button-loading" (click)="handleLoadingClick()">Loading</button>
+<button id="button-error" (click)="handleErrorClick()">Error</button>
+<button id="button-idle" (click)="handleIdleClick()">Idle</button>
+
+<p id="retry-clicked" *ngIf="retryClicked">Retry clicked</p>

@@ -2,7 +2,21 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-loading-bar',
-  template: `<component-loading-bar status="loading"></component-loading-bar>`,
+  templateUrl: './loading-bar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LoadingBarComponent {}
+export class LoadingBarComponent {
+  status: 'loading' | 'error' | 'idle' | undefined;
+
+  handleLoadingClick() {
+    this.status = 'loading';
+  }
+
+  handleErrorClick() {
+    this.status = 'error';
+  }
+
+  handleIdleClick() {
+    this.status = 'idle';
+  }
+}
