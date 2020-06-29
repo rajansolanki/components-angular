@@ -1,8 +1,24 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
+import { ErrorType } from '@bit/rajansolanki.dev.error';
+
 @Component({
   selector: 'app-error',
-  template: `<component-error type="app"></component-error>`,
+  templateUrl: './error.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ErrorComponent {}
+export class ErrorComponent {
+  type: ErrorType | undefined;
+
+  handleAppClick() {
+    this.type = 'app';
+  }
+
+  handleGlobalClick() {
+    this.type = 'global';
+  }
+
+  handleResetClick() {
+    this.type = undefined;
+  }
+}
