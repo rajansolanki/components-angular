@@ -40,7 +40,7 @@
     "@angular/language-service": "~10.0.5",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@types/jest": "^25.2.1",
+    "@types/jest": "^26.0.8",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "cypress": "^4.9.0",
