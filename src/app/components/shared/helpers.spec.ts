@@ -9,14 +9,14 @@ customElements.define = jest.fn();
 
 jest.mock('@angular/core', () => {
   return {
-    ...jest.requireActual('@angular/core'),
+    ...jest.requireActual<{}>('@angular/core'),
     getPlatform: jest.fn().mockReturnValue({ bootstrapModule: jest.fn() }),
   };
 });
 
 jest.mock('@angular/platform-browser', () => {
   return {
-    ...jest.requireActual('@angular/platform-browser'),
+    ...jest.requireActual<{}>('@angular/platform-browser'),
     platformBrowser: jest.fn().mockReturnValue({ bootstrapModule: jest.fn() }),
   };
 });
