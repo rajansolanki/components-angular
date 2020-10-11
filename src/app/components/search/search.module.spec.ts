@@ -13,7 +13,7 @@ jest.mock('./components/search.component', () => ({
 }));
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`SearchModule`', () => {
   let searchModule: SearchModule;

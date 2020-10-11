@@ -13,7 +13,7 @@ jest.mock('./components/hover.component', () => ({
 }));
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`HoverModule`', () => {
   let hoverModule: HoverModule;

@@ -13,7 +13,7 @@ jest.mock('./components/loading-bar.component', () => ({
 }));
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`LoadingBarModule`', () => {
   let loadingbarModule: LoadingBarModule;

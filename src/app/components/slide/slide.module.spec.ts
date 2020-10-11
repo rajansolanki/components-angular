@@ -13,7 +13,7 @@ jest.mock('./components/slide.component', () => ({
 }));
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`SlideModule`', () => {
   let slideModule: SlideModule;

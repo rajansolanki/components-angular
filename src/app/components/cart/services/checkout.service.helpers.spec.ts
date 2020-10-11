@@ -7,7 +7,7 @@ jest.mock('./store.helpers', () => ({
 }));
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`createTotalPrice`', () => {
   it('should return total price rounded to 2 decimal places', () => {

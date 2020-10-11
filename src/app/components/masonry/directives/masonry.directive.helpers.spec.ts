@@ -10,7 +10,7 @@ import {
 } from './masonry.directive.helpers';
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`isNth`', () => {
   it('should return `true` if `index` arg is every `nth` arg', () => {

@@ -1,7 +1,7 @@
 import { getPagePosition } from './hover.directive.helpers';
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`getPagePosition`', () => {
   describe('Unknown `event`', () => {

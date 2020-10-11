@@ -15,7 +15,7 @@ describe('`MasonryComponent`', () => {
     }).compileComponents()));
 
   beforeEach(jest.clearAllMocks);
-  afterEach(expect.hasAssertions);
+  afterEach(() => expect.hasAssertions());
 
   beforeEach(createComponent);
 

@@ -13,7 +13,7 @@ jest.mock('./components/cart.component', () => ({
 }));
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`CartModule`', () => {
   let cartModule: CartModule;

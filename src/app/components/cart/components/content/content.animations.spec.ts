@@ -15,7 +15,7 @@ jest.mock('popmotion-pose', () =>
 );
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`CartContentAnimationsDirective`', () => {
   beforeEach(setupTest);

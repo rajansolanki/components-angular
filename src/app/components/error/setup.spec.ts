@@ -11,7 +11,7 @@ jest.mock('./error.module', () => ({
 }));
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`setup`', () => {
   it('should call `setupModule` with `ErrorModule` arg', () => {
