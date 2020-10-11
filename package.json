@@ -30,7 +30,7 @@
     "fuse.js": "^6.4.1",
     "popmotion-pose": "^3.4.11",
     "rxjs": "~6.6.3",
-    "tslib": "^1.14.0",
+    "tslib": "^1.14.1",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
