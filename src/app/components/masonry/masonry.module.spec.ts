@@ -17,7 +17,7 @@ jest.mock('./directives/masonry.directive', () => ({
 }));
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`MasonryModule`', () => {
   let masonryModule: MasonryModule;

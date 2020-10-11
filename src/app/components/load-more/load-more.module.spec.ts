@@ -13,7 +13,7 @@ jest.mock('./components/load-more.component', () => ({
 }));
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`LoadMoreModule`', () => {
   let errorModule: LoadMoreModule;

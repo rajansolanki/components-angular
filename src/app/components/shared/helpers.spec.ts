@@ -26,7 +26,7 @@ jest.mock('@angular/elements', () => ({
 }));
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`setupModule`', () => {
   it('should call `getPlatform`', () => {

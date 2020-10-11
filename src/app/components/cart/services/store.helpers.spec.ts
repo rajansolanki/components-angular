@@ -9,7 +9,7 @@ import {
 } from './store.helpers';
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`getStoreItems`', () => {
   it('should map and return `store`', () => {

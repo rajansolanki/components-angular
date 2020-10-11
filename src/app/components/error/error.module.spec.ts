@@ -13,7 +13,7 @@ jest.mock('./components/error.component', () => ({
 }));
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`ErrorModule`', () => {
   let errorModule: ErrorModule;

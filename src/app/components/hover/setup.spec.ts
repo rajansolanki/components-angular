@@ -11,7 +11,7 @@ jest.mock('./hover.module', () => ({
 }));
 
 beforeEach(jest.clearAllMocks);
-afterEach(expect.hasAssertions);
+afterEach(() => expect.hasAssertions());
 
 describe('`setup`', () => {
   it('should call `setupModule` with `HoverModule` arg', () => {
