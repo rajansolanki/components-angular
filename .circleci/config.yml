@@ -18,9 +18,6 @@ jobs:
           name: yarn
           command: yarn --frozen-lockfile
       - run:
-          name: commitlint
-          command: yarn commitlint --from origin/master --to ${CIRCLE_SHA1} -V
-      - run:
           name: prettier
           command: yarn prettier -c "**/*.{ts,js,html,scss,md,yml,json}"
       - run:
