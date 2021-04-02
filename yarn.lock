@@ -121,10 +121,10 @@
     ora "5.0.0"
     rxjs "6.6.2"
 
-"@angular/animations@~11.2.7":
-  version "11.2.7"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-11.2.7.tgz#b0e6fd30fa1ac284be7d1c1815e721b38085ef41"
-  integrity sha512-i+H5vC2/NUqZwGeoDHpLDn81R3prQGwT1AajMqFw9D3U6VX6G5EfYmn1zLvu8nL2r4cYMsSQ/LKnKl2jnQX0sQ==
+"@angular/animations@~11.2.8":
+  version "11.2.8"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-11.2.8.tgz#d68fd6c61c199299df5a964bfdc106b09aab52dc"
+  integrity sha512-fYPXO8xgMYEpIc19o5B2f8U3BCmElQf4n/lIvVk9gky8CF5alSlClbbTe31orWDwGiqUnWkHWDZvCwi2C2Srvw==
   dependencies:
     tslib "^2.0.0"
 
