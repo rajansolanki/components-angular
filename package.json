@@ -49,7 +49,7 @@
     "jest-junit": "^12.0.0",
     "jest-preset-angular": "^8.4.0",
     "lint-staged": "^11.0.0",
-    "prettier": "^2.1.2",
+    "prettier": "^2.2.1",
     "start-server-and-test": "^1.12.1",
     "ts-node": "~9.1.1",
     "tslint": "~6.1.0",
