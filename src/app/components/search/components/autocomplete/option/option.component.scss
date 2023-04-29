@@ -19,7 +19,7 @@ $border-radius: $button-border-radius;
 }
 
 div {
-  margin: ($button-padding / 2) 0;
+  margin: ($button-padding * 0.5) 0;
   padding: $button-padding;
   background: $grey-light-secondary;
   color: $black-text-secondary;

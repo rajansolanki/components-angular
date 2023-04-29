@@ -13,14 +13,14 @@ $content-margin: 0.5em 0;
   overflow: hidden;
   display: flex;
   align-items: center;
-  margin: ($button-padding / 2) 0;
+  margin: ($button-padding * 0.5) 0;
 
   .item-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
-    margin: ($remove-size / 2) $remove-size;
+    margin: ($remove-size * 0.5) $remove-size;
 
     .content-titles {
       flex-grow: 1;
