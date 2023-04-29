@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $columns: 12;
 $gutter: 16px;
 $max-width: 1400px;
@@ -48,31 +50,31 @@ $padding-md: 60px;
 }
 
 @mixin width($xs, $sm: 0, $md: 0, $lg: 0, $xl: 0, $padding: $gutter) {
-  width: $xs / $columns * 100%;
-  padding-left: $padding / 2;
-  padding-right: $padding / 2;
+  width: math.div($xs, $columns) * 100%;
+  padding-left: $padding * 0.5;
+  padding-right: $padding * 0.5;
 
   @if ($sm > 0) {
     @include sm {
-      width: $sm / $columns * 100%;
+      width: math.div($sm, $columns) * 100%;
     }
   }
 
   @if ($md > 0) {
     @include md {
-      width: $md / $columns * 100%;
+      width: math.div($md, $columns) * 100%;
     }
   }
 
   @if ($lg > 0) {
     @include lg {
-      width: $lg / $columns * 100%;
+      width: math.div($lg, $columns) * 100%;
     }
   }
 
   @if ($xl > 0) {
     @include xl {
-      width: $xl / $columns * 100%;
+      width: math.div($xl, $columns) * 100%;
     }
   }
 }
@@ -118,6 +120,6 @@ $padding-md: 60px;
 }
 
 %container-col {
-  margin-left: -$gutter / 2;
-  margin-right: -$gutter / 2;
+  margin-left: -$gutter * 0.5;
+  margin-right: -$gutter * 0.5;
 }

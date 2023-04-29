@@ -1,7 +1,9 @@
+@use "sass:math";
+
 @import './grid';
 
 @function stripunit($number) {
-  @return $number / ($number * 0 + 1);
+  @return math.div($number, $number * 0 + 1);
 }
 
 @mixin font-size($xs, $sm: 0, $md: 0, $lg: 0, $xl: 0) {
