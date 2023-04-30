@@ -1,4 +1,4 @@
-import { NgModule, Injector } from '@angular/core';
+import { NgModule, Injector, DoBootstrap } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -13,9 +13,8 @@ export const NAME = 'component-search';
 @NgModule({
   declarations: [SearchComponent, AutoCompleteComponent, OptionComponent],
   imports: [BrowserModule, BrowserAnimationsModule, ReactiveFormsModule],
-  entryComponents: [SearchComponent],
 })
-export class SearchModule {
+export class SearchModule implements DoBootstrap {
   constructor(private injector: Injector) {}
 
   ngDoBootstrap() {

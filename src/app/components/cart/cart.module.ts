@@ -1,4 +1,4 @@
-import { NgModule, Injector } from '@angular/core';
+import { NgModule, Injector, DoBootstrap } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -14,9 +14,8 @@ export const NAME = 'component-cart';
   declarations: [CartComponent, CartContentComponent, CartItemComponent],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [CheckoutService],
-  entryComponents: [CartComponent],
 })
-export class CartModule {
+export class CartModule implements DoBootstrap {
   constructor(private injector: Injector) {}
 
   ngDoBootstrap() {

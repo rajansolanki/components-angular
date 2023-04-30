@@ -1,4 +1,4 @@
-import { NgModule, Injector } from '@angular/core';
+import { NgModule, Injector, DoBootstrap } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { bootstrapModule } from '@bit/rajansolanki.dev.shared';
@@ -10,9 +10,8 @@ export const NAME = 'component-hover';
 @NgModule({
   declarations: [HoverComponent, HoverDirective],
   imports: [BrowserModule],
-  entryComponents: [HoverComponent],
 })
-export class HoverModule {
+export class HoverModule implements DoBootstrap {
   constructor(private injector: Injector) {}
 
   ngDoBootstrap() {

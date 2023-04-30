@@ -1,4 +1,4 @@
-import { NgModule, Injector } from '@angular/core';
+import { NgModule, Injector, DoBootstrap } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -11,9 +11,8 @@ export const NAME = 'component-slide';
 @NgModule({
   declarations: [SlideComponent, ImageComponent],
   imports: [BrowserModule, BrowserAnimationsModule],
-  entryComponents: [SlideComponent],
 })
-export class SlideModule {
+export class SlideModule implements DoBootstrap {
   constructor(private injector: Injector) {}
 
   ngDoBootstrap() {

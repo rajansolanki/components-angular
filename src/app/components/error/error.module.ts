@@ -1,4 +1,4 @@
-import { NgModule, Injector } from '@angular/core';
+import { NgModule, Injector, DoBootstrap } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -10,9 +10,8 @@ export const NAME = 'component-error';
 @NgModule({
   declarations: [ErrorComponent],
   imports: [BrowserModule, BrowserAnimationsModule],
-  entryComponents: [ErrorComponent],
 })
-export class ErrorModule {
+export class ErrorModule implements DoBootstrap {
   constructor(private injector: Injector) {}
 
   ngDoBootstrap() {
