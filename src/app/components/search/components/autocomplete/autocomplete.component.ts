@@ -4,7 +4,7 @@ import {
   ElementRef,
   Input,
 } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 
 import {
   autoCompleteAnimations,
@@ -19,7 +19,7 @@ import {
   animations: autoCompleteAnimations,
 })
 export class AutoCompleteComponent extends AutoCompleteComponentAnimationsDirective {
-  @Input() private control: FormControl | undefined;
+  @Input() private control: UntypedFormControl | undefined;
   @Input() tags: string[] | null | undefined;
 
   constructor(protected el: ElementRef<HTMLElement>) {
