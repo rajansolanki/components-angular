@@ -31,7 +31,7 @@
     "popmotion-pose": "^3.4.11",
     "rxjs": "~6.6.7",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.13.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.7",
