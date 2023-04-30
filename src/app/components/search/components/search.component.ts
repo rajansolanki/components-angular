@@ -4,7 +4,7 @@ import {
   ViewEncapsulation,
   OnInit,
 } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 
 import { Observable, of } from 'rxjs';
 import {
@@ -24,7 +24,7 @@ import { getTagStore } from '../data';
   encapsulation: ViewEncapsulation.None,
 })
 export class SearchComponent implements OnInit {
-  control = new FormControl();
+  control = new UntypedFormControl();
   private tagStore = getTagStore();
   tags$: Observable<string[]> | undefined;
 
