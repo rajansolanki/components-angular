@@ -47,7 +47,7 @@
     "husky": "^6.0.0",
     "jest": "^26.6.3",
     "jest-junit": "^16.0.0",
-    "jest-preset-angular": "^8.4.0",
+    "jest-preset-angular": "^11.0.1",
     "lint-staged": "^11.0.1",
     "prettier": "^2.1.2",
     "start-server-and-test": "^1.12.1",
