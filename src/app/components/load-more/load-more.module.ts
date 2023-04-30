@@ -1,4 +1,4 @@
-import { NgModule, Injector } from '@angular/core';
+import { NgModule, Injector, DoBootstrap } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { bootstrapModule } from '@bit/rajansolanki.dev.shared';
@@ -9,9 +9,8 @@ export const NAME = 'component-load-more';
 @NgModule({
   declarations: [LoadMoreComponent],
   imports: [BrowserModule],
-  entryComponents: [LoadMoreComponent],
 })
-export class LoadMoreModule {
+export class LoadMoreModule implements DoBootstrap {
   constructor(private injector: Injector) {}
 
   ngDoBootstrap() {

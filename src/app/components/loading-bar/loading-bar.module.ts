@@ -1,4 +1,4 @@
-import { NgModule, Injector } from '@angular/core';
+import { NgModule, Injector, DoBootstrap } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { bootstrapModule } from '@bit/rajansolanki.dev.shared';
@@ -9,9 +9,8 @@ export const NAME = 'component-loading-bar';
 @NgModule({
   declarations: [LoadingBarComponent],
   imports: [BrowserModule],
-  entryComponents: [LoadingBarComponent],
 })
-export class LoadingBarModule {
+export class LoadingBarModule implements DoBootstrap {
   constructor(private injector: Injector) {}
 
   ngDoBootstrap() {

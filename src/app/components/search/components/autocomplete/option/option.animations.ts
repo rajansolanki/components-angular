@@ -35,7 +35,7 @@ export const optionAnimations = POSE_LEAVE_ANIMATION;
 @Directive()
 export class OptionComponentAnimationsDirective
   implements AfterViewInit, OnDestroy {
-  @HostBinding('@enterLeave') enterLeave: void;
+  @HostBinding('@enterLeave') enterLeave: void | undefined;
 
   private poseEl: DomPopmotionPoser;
 

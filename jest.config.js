@@ -18,11 +18,5 @@ module.exports = {
     ],
   ],
   coverageDirectory: '<rootDir>/reports/jest',
-  globals: {
-    'ts-jest': {
-      diagnostics: {
-        warnOnly: true,
-      },
-    },
-  },
+  globalSetup: 'jest-preset-angular/global-setup',
 };

@@ -15,24 +15,24 @@ let page: Page;
   selector: 'page-1',
   template: '<div id="page-1">Page 1</div>',
 })
-export class Page1 {}
+export class Page1Component {}
 
 @Component({
   selector: 'page-2',
   template: '<div id="page-2">Page 2</div>',
 })
-export class Page2 {}
+export class Page2Component {}
 
 describe('`AppComponent`', () => {
   beforeEach(async(() =>
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule.withRoutes([
-          { path: 'page-1', component: Page1 },
-          { path: 'page-2', component: Page2 },
+          { path: 'page-1', component: Page1Component },
+          { path: 'page-2', component: Page2Component },
         ]),
       ],
-      declarations: [AppComponent, Page1, Page2],
+      declarations: [AppComponent, Page1Component, Page2Component],
     }).compileComponents()));
 
   beforeEach(jest.clearAllMocks);
@@ -52,8 +52,8 @@ describe('`AppComponent`', () => {
 
     it('should set `routes` as `Router` `config`', () => {
       expect(comp.routes).toEqual([
-        { path: 'page-1', component: Page1 },
-        { path: 'page-2', component: Page2 },
+        { path: 'page-1', component: Page1Component },
+        { path: 'page-2', component: Page2Component },
       ]);
     });
   });
