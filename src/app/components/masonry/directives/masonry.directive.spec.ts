@@ -9,7 +9,7 @@ let fixture: ComponentFixture<TestHostComponent>;
 let masonryDirective: MasonryDirective;
 let renderer2: Renderer2;
 
-window.setInterval = jest.fn();
+window.setInterval = jest.fn() as any;
 window.clearInterval = jest.fn();
 
 jest.mock('./masonry.directive.helpers', () => ({
@@ -179,7 +179,9 @@ describe('`MasonryDirective`', () => {
         2000
       );
 
-      const [[callback]] = (window.setInterval as jest.Mock).mock.calls;
+      const [
+        [callback],
+      ] = ((window.setInterval as any) as jest.Mock).mock.calls;
       expect((masonryDirective as any).updateChildren).toHaveBeenCalledTimes(1);
       callback();
       expect((masonryDirective as any).updateChildren).toHaveBeenCalledTimes(2);
