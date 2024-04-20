@@ -1,0 +1,99 @@
+@import '../../../../../../src/app/components/sass/mixins';
+
+$remove-size: 1em;
+$content-margin: 0.5em 0;
+
+:host {
+  overflow: hidden;
+  display: block;
+  border-radius: $button-border-radius;
+}
+
+.cart-item {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin: ($button-padding * 0.5) 0;
+
+  .item-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin: ($remove-size * 0.5) $remove-size;
+
+    .content-titles {
+      flex-grow: 1;
+      flex-basis: 55%;
+      margin: $content-margin;
+      margin-right: 1em;
+
+      .variant-title {
+        color: $white-text-secondary;
+      }
+    }
+
+    .content-meta {
+      display: flex;
+      flex-grow: 10;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      .quantity {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        margin: $content-margin;
+        margin-right: 1em;
+        background: $white;
+        border-radius: $button-border-radius;
+
+        .current-quantity {
+          min-width: 20px;
+          text-align: center;
+          color: $black-text-primary;
+        }
+
+        button {
+          margin: 0 0.25em;
+          padding: 0.25rem;
+          background: $white;
+          color: $black-text-secondary;
+
+          @include hover {
+            color: $black-text-primary;
+          }
+
+          &:disabled {
+            color: $white-text-secondary;
+            cursor: not-allowed;
+            transform: none;
+          }
+        }
+      }
+
+      .prices {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: $content-margin;
+        text-align: right;
+
+        .previous-price {
+          color: $white-text-secondary;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+
+  .item-remove {
+    flex-shrink: 0;
+    position: relative;
+    @include closeButton($remove-size, $white-hover, $white);
+    background: none;
+    margin: 0 $remove-size;
+    padding: 0;
+  }
+}

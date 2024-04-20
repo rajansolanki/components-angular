@@ -1,8 +1,9 @@
 module.exports = {
   preset: 'jest-preset-angular',
   setupFilesAfterEnv: ['<rootDir>/src/setup-jest.ts'],
+  modulePathIgnorePatterns: ['<rootDir>/dist/'],
   moduleNameMapper: {
-    '@bit/rajansolanki.dev.(.*)': '<rootDir>/src/app/components/$1',
+    '@rajansolanki/ll-shared': '<rootDir>/projects/ll-shared/src',
     '^routes$': '<rootDir>/src/app/routes',
   },
   testPathIgnorePatterns: [

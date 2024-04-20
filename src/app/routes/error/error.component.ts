@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
-import { ErrorType } from '@bit/rajansolanki.dev.error';
+import { ErrorType } from 'll-error';
 
 @Component({
   selector: 'app-error',
