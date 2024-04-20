@@ -1,0 +1,11 @@
+@import '../../../../../src/app/components/sass/mixins';
+
+:host {
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+  width: 100%;
+  padding: 0 $button-padding;
+  background: $grey-light-primary;
+  border-radius: $button-border-radius;
+}

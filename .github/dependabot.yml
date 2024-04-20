@@ -1,9 +1,4 @@
 version: 2
-registries:
-  npm-registry-node-bit-dev:
-    type: npm-registry
-    url: https://node.bit.dev
-    token: '${{secrets.NPM_REGISTRY_NODE_BIT_DEV_TOKEN}}'
 
 updates:
   - package-ecosystem: npm
@@ -53,5 +48,3 @@ updates:
       - dependency-name: '@angular/elements'
         versions:
           - 11.2.3
-    registries:
-      - npm-registry-node-bit-dev
