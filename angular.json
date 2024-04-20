@@ -82,6 +82,357 @@
           }
         }
       }
+    },
+    "ll-cart": {
+      "projectType": "library",
+      "root": "projects/ll-cart",
+      "sourceRoot": "projects/ll-cart/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ll-cart/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ll-cart/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ll-cart/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ll-cart/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ll-cart/**/*.ts",
+              "projects/ll-cart/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "ll-shared": {
+      "projectType": "library",
+      "root": "projects/ll-shared",
+      "sourceRoot": "projects/ll-shared/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ll-shared/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ll-shared/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ll-shared/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ll-shared/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ll-shared/**/*.ts",
+              "projects/ll-shared/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "ll-error": {
+      "projectType": "library",
+      "root": "projects/ll-error",
+      "sourceRoot": "projects/ll-error/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ll-error/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ll-error/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ll-error/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ll-error/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ll-error/**/*.ts",
+              "projects/ll-error/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "ll-hover": {
+      "projectType": "library",
+      "root": "projects/ll-hover",
+      "sourceRoot": "projects/ll-hover/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ll-hover/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ll-hover/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ll-hover/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ll-hover/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ll-hover/**/*.ts",
+              "projects/ll-hover/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "ll-load-more": {
+      "projectType": "library",
+      "root": "projects/ll-load-more",
+      "sourceRoot": "projects/ll-load-more/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ll-load-more/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ll-load-more/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ll-load-more/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ll-load-more/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ll-load-more/**/*.ts",
+              "projects/ll-load-more/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "ll-loading-bar": {
+      "projectType": "library",
+      "root": "projects/ll-loading-bar",
+      "sourceRoot": "projects/ll-loading-bar/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ll-loading-bar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ll-loading-bar/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ll-loading-bar/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ll-loading-bar/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ll-loading-bar/**/*.ts",
+              "projects/ll-loading-bar/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "ll-masonry": {
+      "projectType": "library",
+      "root": "projects/ll-masonry",
+      "sourceRoot": "projects/ll-masonry/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ll-masonry/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ll-masonry/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ll-masonry/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ll-masonry/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ll-masonry/**/*.ts",
+              "projects/ll-masonry/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "ll-search": {
+      "projectType": "library",
+      "root": "projects/ll-search",
+      "sourceRoot": "projects/ll-search/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ll-search/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ll-search/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ll-search/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ll-search/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ll-search/**/*.ts",
+              "projects/ll-search/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "ll-slide": {
+      "projectType": "library",
+      "root": "projects/ll-slide",
+      "sourceRoot": "projects/ll-slide/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ll-slide/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ll-slide/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ll-slide/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ll-slide/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ll-slide/**/*.ts",
+              "projects/ll-slide/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

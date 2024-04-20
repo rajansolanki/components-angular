@@ -1,11 +1,11 @@
-import setupMasonry from './masonry';
-import setupError from './error';
-import setupLoadMore from './load-more';
-import setupCart from './cart';
-import setupLoadingBar from './loading-bar';
-import setupHover from './hover';
-import setupSearch from './search';
-import setupSlide from './slide';
+import { setup as setupMasonry } from 'll-masonry';
+import { setup as setupError } from 'll-error';
+import { setup as setupLoadMore } from 'll-load-more';
+import { setup as setupCart } from 'll-cart';
+import { setup as setupLoadingBar } from 'll-loading-bar';
+import { setup as setupHover } from 'll-hover';
+import { setup as setupSearch } from 'll-search';
+import { setup as setupSlide } from 'll-slide';
 
 setupMasonry();
 setupError();

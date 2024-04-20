@@ -21,6 +21,9 @@ jobs:
           name: prettier
           command: yarn prettier -c "**/*.{ts,js,html,scss,md,yml,json}"
       - run:
+          name: build required libraries
+          command: yarn ng build ll-shared
+      - run:
           name: tsc
           command: |
             yarn tsc --noEmit -p tsconfig.app.json
