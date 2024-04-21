@@ -7,8 +7,8 @@
     "lint": "ng lint",
     "test:spec": "jest",
     "test:spec:watch": "jest --watch",
-    "test:e2e": "start-test serve http://localhost:4200 '$(npm bin)/cypress run'",
-    "test:e2e:watch": "start-test serve http://localhost:4200 '$(npm bin)/cypress open'",
+    "test:e2e": "start-test serve http://localhost:4200 'cypress run'",
+    "test:e2e:watch": "start-test serve http://localhost:4200 'cypress open'",
     "prepare": "husky"
   },
   "private": true,
