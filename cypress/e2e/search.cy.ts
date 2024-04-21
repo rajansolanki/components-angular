@@ -11,8 +11,8 @@ context('Search', () => {
 
   it('should display autocomplete', () => {
     cy.get(elements.search).should('be.visible').and('not.have.value');
-    cy.get(elements.searchClear).should('not.be.visible');
-    cy.get(elements.searchAutocomplete).should('not.be.visible');
+    cy.get(elements.searchClear).should('not.exist');
+    cy.get(elements.searchAutocomplete).should('not.exist');
     cy.get(elements.search).type('pa');
     cy.get(elements.searchClear).should('be.visible');
     cy.get(elements.searchAutocomplete).should('be.visible');
@@ -23,11 +23,11 @@ context('Search', () => {
       .and('not.have.class', 'ng-animating')
       .click();
     cy.get(elements.searchAutocompleteOptions).first().click();
-    cy.get(elements.searchAutocomplete).should('not.be.visible');
+    cy.get(elements.searchAutocomplete).should('not.exist');
     cy.get(elements.search).should('have.value', 'painting');
     cy.get(elements.searchClear).click();
-    cy.get(elements.searchClear).should('not.be.visible');
+    cy.get(elements.searchClear).should('not.exist');
     cy.get(elements.search).should('not.have.value');
-    cy.get(elements.searchAutocomplete).should('not.be.visible');
+    cy.get(elements.searchAutocomplete).should('not.exist');
   });
 });

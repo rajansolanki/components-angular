@@ -14,7 +14,7 @@ context('Error', () => {
   it('should display errors', () => {
     cy.get(elements.buttonApp).click();
     cy.get(elements.errorApp).should('be.visible');
-    cy.get(elements.errorGlobal).should('not.be.visible');
+    cy.get(elements.errorGlobal).should('not.exist');
     cy.get(elements.errorText).should('contain.text', 'load products');
     cy.get(elements.errorButtons)
       .should('have.length', 2)
@@ -23,7 +23,7 @@ context('Error', () => {
 
     cy.get(elements.buttonGlobal).click();
     cy.get(elements.errorGlobal).should('be.visible');
-    cy.get(elements.errorApp).should('not.be.visible');
+    cy.get(elements.errorApp).should('not.exist');
     cy.get(elements.errorText).should('contain.text', 'an error');
     cy.get(elements.errorButtons)
       .should('have.length', 2)
@@ -31,7 +31,7 @@ context('Error', () => {
       .and('contain.text', 'Reload');
 
     cy.get(elements.buttonReset).click();
-    cy.get(elements.errorApp).should('not.be.visible');
-    cy.get(elements.errorGlobal).should('not.be.visible');
+    cy.get(elements.errorApp).should('not.exist');
+    cy.get(elements.errorGlobal).should('not.exist');
   });
 });
